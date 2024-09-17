@@ -1,0 +1,14 @@
+{
+  "name": "@anchor/shareholder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "diff": "prisma migrate diff --to-schema-datamodel=./prisma/schema.prisma --from-schema-datasource=./prisma/schema.prisma --script > ./prisma/sql/diff.sql && cat ./prisma/sql/diff.sql",
+    "execute": "prisma db execute --file ./prisma/sql/diff.sql --schema ./prisma/schema.prisma"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
